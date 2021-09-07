@@ -1,20 +1,24 @@
+// Vue stuff:
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
 
 // Quill Text Editor Stuff:
-import { quillEditor } from 'vue-quill-editor'
-import 'quill/dist/quill.core.css' // import styles
-import 'quill/dist/quill.snow.css' // for snow theme
-import 'quill/dist/quill.bubble.css' // for bubble theme
+// import { QuillEditor } from '@vueup/vue-quill'
+import '@vueup/vue-quill/dist/vue-quill.snow.css';
 
 // Tailwind stuff:
 import './assets/styles/tailwind.css'
+import TestingArea from "@/components/TestingArea";
 
 // Export components
 export default {
     components: {
-        quillEditor
+        // QuillEditor
     }
 }
 
-createApp(App).mount('#app')
+
+
+createApp(App).use(router).mount('#app')
+App.component('TestingArea', TestingArea)

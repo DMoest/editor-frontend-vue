@@ -1,7 +1,11 @@
 <template>
   <h1 class="text-4xl">Experimental Area</h1>
+  <p>Testa att allt funkar bra först innan du importerar!</p>
 
-  <!-- V-Model text area - type to direct print -->
+
+
+<!--  &lt;!&ndash; V-Model text area - type to direct print &ndash;&gt;-->
+<!--  <TextToDirectPrint message="{{ message }}"></TextToDirectPrint>-->
   <div class="h-auto mb-6 flex flex-row justify-between p-4 border-b-2 border-blue-400">
     <div class="w-full flex flex-col justify-around">
       <h3 class="text-left text-lg">Type here:</h3>
@@ -18,7 +22,8 @@
 
 
 
-  <!-- Who is a Beatle - checkbox response V-Model -->
+<!--  &lt;!&ndash; Who is a Beatle - checkbox response V-Model &ndash;&gt;-->
+<!--  <CheckBoxToArrayPrint></CheckBoxToArrayPrint>-->
   <div class="h-auto mb-6 flex flex-col justify-between p-4 border-b-2 border-red-400">
     <div>
       <h2 >Who is a Beatle?</h2>
@@ -40,7 +45,9 @@
 
 
 
-  <!-- Taco - text direct response to print out -->
+<!--  &lt;!&ndash; Taco - text direct response to print out &ndash;&gt;-->
+<!--  <TextToDirectResponse></TextToDirectResponse>-->
+  <!-- Do you like TACOs? - Radio -->
   <div class="w-full p-8 border-b-2 border-green-200">
     <h3>What is your favorite kind of taco?</h3>
 
@@ -56,9 +63,6 @@
     </button>
   </div>
 
-
-
-  <!-- Do you like TACOs? - Radio -->
   <div class="w-full h-auto p-8 border-b-2 border-green-400">
     <h3 class="text-xl">Do you like tacos?</h3>
 
@@ -75,7 +79,6 @@
                              type="radio">No
       </label>
     </div>
-
     <p v-if="tacos === 'yes'"
        class="thumbs">Awesome human!</p>
     <p class="text-left w-1/2 m-auto" v-else-if="tacos === 'dan just dans tacos'">
@@ -88,6 +91,9 @@
   </div>
 
 
+
+<!--  &lt;!&ndash; Backpack/ShoppingCart - quantity click event &ndash;&gt;-->
+<!--  <QuantityCounter></QuantityCounter>-->
   <!-- Backpack - quantity click event -->
   <div class="item mb-6 p-4 flex flex-col justify-between gap-4 border-b-2 border-yellow-500">
 
@@ -100,6 +106,10 @@
     <button class="submit" @click="submit">Submit</button>
   </div>
 
+
+
+<!--  &lt;!&ndash; Addition with number inputs &ndash;&gt;-->
+<!--  <Addition></Addition>-->
   <div class="mb-6 p-4 border-b-2 border-purple-400">
     <h3 class="text-2xl block">Addition</h3>
 
@@ -129,7 +139,43 @@
 
 
 <script>
-    export default {
-        name: 'Testingarea'
+// @ is an alias to /src
+// import TextToDirectPrint from "@/components/TestingArea/TextToDirectPrint.vue";
+// import CheckBoxToArrayPrint from "@/components/TestingArea/CheckBoxToArrayPrint.vue";
+// import TextToDirectResponse from "@/components/TestingArea/TestToDirectResponse.vue";
+// import QuantityCounter from "@/components/TestingArea/QuantityCounter.vue";
+// import Addition from "@/components/TestingArea/Addition.vue";
+
+export default {
+  name: 'TestingArea',
+  components: {
+    // TextToDirectPrint,
+    // CheckBoxToArrayPrint,
+    // TextToDirectResponse,
+    // QuantityCounter,
+    // Addition
+  },
+  data() {
+    return {
+      message: 'Hello World!',
+      name: "CheckBoxToArrayPrint",
+      checkedNames: [],
+      options: [
+        { value: 'John' },
+        { value: 'Paul' },
+        { value: 'George' },
+        { value: 'Ringo' },
+        { value: 'Pete' },
+      ],
+      tacos: '',
+      activeClass: 'text-white px-3 py-2 border-2 border-blue-400 bg-blue-400 hover:bg-blue-200 hover:border-blue-300',
+      counter: 0,
+
     };
+  }
+};
 </script>
+
+<style scoped>
+
+</style>
