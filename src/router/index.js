@@ -5,7 +5,7 @@ import { createRouter, createWebHistory } from 'vue-router'
  */
 import Home from '../views/Home.vue'
 import About from '../views/About.vue'
-import TestingArea from '../views/TestingArea-View.vue'
+import Experimental from '../views/Experimental.vue'
 // import TextEditor from '../views/TextEditor-View.vue'
 
 
@@ -29,9 +29,9 @@ const routes = [
   //   component: TextEditor
   // },
   {
-    path: '/testing-area',
-    name: 'TestingArea',
-    component: TestingArea
+    path: '/experimental',
+    name: 'Experimental',
+    component: Experimental
   }
 ]
 
