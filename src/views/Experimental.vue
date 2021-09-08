@@ -1,27 +1,22 @@
 <template>
+  <h1 class="text-3xl my-8">Experimental Area for Vue3</h1>
+
+  <p class="italic p-4">This area is only for experimental parts construction with the intention to learn more about the Vue3 framework for JavaScript.
+    What you see here have no real functionality except trying to do small portions of things nessecery to know for webdevelopement and possibly to be implement later on but elsewhere.</p>
+
+  <hr>
 
   <TextToDirectPrint></TextToDirectPrint>
-
   <CheckBoxToArrayPrint></CheckBoxToArrayPrint>
-
   <TextToDirectResponse></TextToDirectResponse>
-
   <QuantityCounter></QuantityCounter>
-
   <Addition></Addition>
-
   <MouseMoves></MouseMoves>
-
   <AppendToListThing></AppendToListThing>
-
   <FormPostRequestResponse></FormPostRequestResponse>
-
   <SortTables></SortTables>
-
   <Collection></Collection>
-
   <Watchers></Watchers>
-
 </template>
 
 
