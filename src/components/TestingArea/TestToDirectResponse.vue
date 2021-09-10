@@ -47,18 +47,21 @@
 
 
 
-<script type="text/x-template" id="radio-text-to-direct-response-template">
-  export default {
-    name: "TestToDirectResponse",
-    data() {
-      return {
-        counter: 0,
-        tacos: '',
-        activeClass: 'text-white px-3 py-2 border-2 border-blue-400 bg-blue-400 hover:bg-blue-200 hover:border-blue-300'
+<script>
+/**
+ * Module Exports.
+ */
+export default {
+  name: "TestToDirectResponse",
+  data() {
+    return {
+      counter: 0,
+      tacos: '',
+      activeClass: 'text-white px-3 py-2 border-2 border-blue-400 bg-blue-400 hover:bg-blue-200 hover:border-blue-300'
 
-      };
-    }
-  };
+    };
+  }
+};
 </script>
 
 

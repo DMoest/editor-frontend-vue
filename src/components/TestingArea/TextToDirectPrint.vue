@@ -19,7 +19,10 @@
 
 
 
-<script type="text/x-template" id="text-to-direct-print-template">
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "TextToDirectPrint",
   data() {

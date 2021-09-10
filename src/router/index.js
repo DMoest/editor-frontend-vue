@@ -7,10 +7,10 @@ import { createRouter, createWebHistory } from 'vue-router'
 /**
  * Import Views for router
  */
-import Home from '../views/Home.vue'
-import About from '../views/About.vue'
-import Experimental from '../views/Experimental.vue'
-import TextEditor from '../views/TextEditor.vue'
+import Home from '../views/Home-View.vue'
+import About from '../views/About-View.vue'
+import Experimental from '../views/Experimental-View.vue'
+import TextEditor from '../views/TextEditor-View.vue'
 
 
 /**

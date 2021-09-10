@@ -17,8 +17,10 @@
 
 
 
-<script type="text/x-template" id="mouse-moves-template">
-
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "MouseMoves",
   data() {

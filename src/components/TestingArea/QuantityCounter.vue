@@ -14,8 +14,10 @@
 
 
 
-<script type="text/x-template" id="quantity-counter-template">
-
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "QuantityCounter",
   data() {

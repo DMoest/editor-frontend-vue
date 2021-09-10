@@ -5,10 +5,19 @@
   </div>
 </template>
 
+
+
 <script>
+/**
+ * Import Module Dependencies.
+ */
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 
+
+/**
+ * Module Exports.
+ */
 export default {
   name: 'Home',
   components: {
@@ -16,3 +25,9 @@ export default {
   }
 }
 </script>
+
+
+
+<style>
+
+</style>

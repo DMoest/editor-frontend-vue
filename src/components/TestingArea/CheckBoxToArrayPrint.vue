@@ -24,7 +24,10 @@
 
 
 
-<script type="text/x-template" id="checkbox-to-array-print-template">
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "CheckBoxToArrayPrint",
   data() {

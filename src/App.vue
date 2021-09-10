@@ -13,8 +13,15 @@
 
 
 <script>
+/**
+ * Import Module Dependencies.
+ */
 // @ is an alias to /src
 
+
+/**
+ * Module Exports.
+ */
 export default {
   name: 'App',
 };
@@ -48,5 +55,4 @@ export default {
 .active {
   background: #3d868f;
 }
-
 </style>

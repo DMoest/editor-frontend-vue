@@ -28,7 +28,10 @@
 
 
 
-<script type="text/x-template" id="list-append-thing-template">
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "AppendToListThing",
   data() {

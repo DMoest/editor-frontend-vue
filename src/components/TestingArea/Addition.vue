@@ -19,8 +19,10 @@
 
 
 
-<script type="text/x-template" id="addition-template">
-
+<script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "Addition",
   data() {

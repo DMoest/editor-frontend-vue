@@ -28,7 +28,12 @@
   </div>
 </template>
 
+
+
 <script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "SortTables",
   data() {
@@ -104,6 +109,8 @@ export default {
   }
 }
 </script>
+
+
 
 <style scoped>
 

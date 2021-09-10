@@ -8,7 +8,12 @@
   </div>
 </template>
 
+
+
 <script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "Watchers",
   data() {
@@ -19,7 +24,7 @@ export default {
   },
   methods: {
     getStuff() {
-      this.orderStatus = 'ordered';
+      this.orderStatus = 'Ordered';
     }
   },
   watch: {
@@ -38,6 +43,8 @@ export default {
   }
 }
 </script>
+
+
 
 <style scoped>
 

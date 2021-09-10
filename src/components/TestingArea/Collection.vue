@@ -40,7 +40,12 @@
   </div>
 </template>
 
+
+
 <script>
+/**
+ * Module Exports.
+ */
 export default {
   name: "Collection",
   data() {
@@ -122,6 +127,8 @@ export default {
 }
 </script>
 
-<style scoped>
+
+
+<style>
 
 </style>
