@@ -25,7 +25,7 @@
        }"
   />
 
-  <DocumentMenu :documents="documents"></DocumentMenu>
+  <DocumentMenu @getThisDocument="getThisDocument" :documents="documents"></DocumentMenu>
   <CreateDocumentForm @createDocument="createDocument"></CreateDocumentForm>
 </template>
 
@@ -75,13 +75,12 @@ export default {
         console.log(`Error Status: ${error.response.status} \n Error Message: ${error.response.message}`);
       })
     },
-    getThisDocuments(id) {
+    getThisDocument(id) {
       console.log('KLICK -> getThisDocument');
-      axios.get(`https://editor-backend-express.azurewebsites.net/document/${id}`, {
-          _id: id
-        })
+      axios.get(`https://editor-backend-express.azurewebsites.net/document/${id}`)
         .then(response => {
           this.currentDocument = response.data;
+          this.textContent = response.data.text;
 
           console.log('Current Document: ', this.currentDocument);
         }).catch(error => {
@@ -109,7 +108,7 @@ export default {
         author: this.currentDocument.author,
         title: this.currentDocument.title,
         category: this.currentDocument.category,
-        text: this.currentDocument.textContent,
+        text: this.textContent,
         status: 'updated',
       }).then(response => {
         JSON.stringify(response, null, 2)
@@ -121,6 +120,7 @@ export default {
   },
   watch: {
     textContent(textValue) {
+      this.currentDocument.text = textValue;
       console.log('*> ', textValue)
     },
     documents() {

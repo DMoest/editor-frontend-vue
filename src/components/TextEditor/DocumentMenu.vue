@@ -11,11 +11,11 @@
       </thead>
 
       <tbody>
-          <tr @click="thisIsTheDocument"
-              v-for="document in documents"
+          <tr v-for="document in documents"
               :key="document"
               class="p-4 rounded bg-gray-100 hover:bg-blue-200">
-            <td class="px-4 py-1 text-left"
+            <td @click="thisIsTheDocument(document['_id'])"
+                class="px-4 py-1 text-left"
                 v-for="key in columns"
                 :key="key">{{ document[key] }}</td>
           </tr>
@@ -36,11 +36,14 @@ export default {
     columns: ["author", "title", "category"],
   }),
   props: {
+    thisId: undefined,
     documents: []
   },
   methods: {
-    thisIsTheDocument() {
-      return this.emit('getThisDocument', { id: document._id })
+    thisIsTheDocument(documentId) {
+      console.log('Document ID: ', documentId);
+
+      return this.$emit('getThisDocument', documentId)
     }
   }
 }
