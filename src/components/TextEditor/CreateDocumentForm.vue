@@ -1,46 +1,34 @@
 <template>
-  <form @submit.prevent="submitForm">
-    <div>
-      <label class="w-1/2 m-auto mt-2 text-left inline-block" for="author">Author: </label><br>
+  <form @submit.prevent="submitForm" class="p-4">
+<!--      <label class="w-3/4 m-auto mt-2 text-left inline-block" for="author">Author: </label><br>-->
       <input type="text"
              id="author"
              v-model="author"
              required
-             class="w-1/2 p-2 rounded-sm m-1 bg-gray-200 focus:bg-blue-100">
-    </div>
+             placeholder="Document author"
+             class="w-4/5 p-2 rounded-sm m-1 bg-gray-200 focus:bg-blue-100">
 
-    <div>
-      <label class="w-1/2 m-auto mt-2 text-left inline-block" for="title">Title: </label><br>
+<!--      <label class="w-3/4 m-auto mt-2 text-left inline-block" for="title">Title: </label><br>-->
       <input type="text"
              id="title"
              v-model="title"
              required
-             class="w-1/2 p-2 rounded-sm m-1 bg-gray-200 focus:bg-blue-100">
-    </div>
+             placeholder="Document title"
+             class="w-4/5 my-1 p-2 rounded-sm bg-gray-200 focus:bg-blue-100">
 
-    <div>
-      <label class="w-1/2 m-auto mt-2 text-left inline-block" for="category">Category</label><br>
+<!--      <label class="w-3/4 m-auto mt-2 text-left inline-block" for="category">Category</label><br>-->
       <input type="text"
              id="category"
              v-model="category"
              required
-             class="w-1/2 p-2 rounded-sm m-1 bg-gray-200 focus:bg-blue-100">
-    </div>
+             placeholder="Document category"
+             class="w-4/5 p-2 rounded-sm bg-gray-200 focus:bg-blue-100">
 
     <button @click="createTheDocument"
-            class="py-2 px-4 rounded bg-blue-400"
+            class="w-4/5 my-4 py-2 px-4 rounded font-bold text-white bg-blue-400 hover:bg-blue-300"
             type="submit">
-      Create document
+      Create New Document
     </button>
-
-    <div class="w-full h-auto m-2 p-2 border-2 border-green-300 rounded">
-      <p v-if="author">{{author}}</p>
-      <p v-if="title">{{title}}</p>
-      <p v-if="category">{{category}}</p>
-
-      <h3 class="mb-4 text-left underline">Response from Server:</h3>
-      <pre>{{ response }}</pre>
-    </div>
   </form>
 </template>
 
@@ -55,7 +43,8 @@ export default {
   data: () => ({
     author: '',
     title: '',
-    category: ''
+    category: '',
+    isShowing: false,
   }),
   methods: {
     createTheDocument() {

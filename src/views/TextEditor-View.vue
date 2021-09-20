@@ -28,9 +28,8 @@ export default {
 
 <style>
 .tox-tinymce {
-  width: 80%;
-  height: auto;
-  margin: auto;
+  width: 100%;
+  height: 100%;
 }
 
 .fade-enter-active {

@@ -1,32 +1,38 @@
 <template>
   <nav class="w-full h-auto p-4 bg-gray-700">
-    <div class="w-1/2 flex flex-row justify-around ">
-      <button @click="showCreateDocumentForm" class="px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Create New</button>
-      <button @click="saveDocument" class="px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Save</button>
-      <button @click="getDocuments" class="px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Get Documents</button>
+    <div class="w-3/4 flex flex-row justify-around ">
+      <button @click="saveDocument"
+              class="ml-1 mr-auto px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Save Change</button>
     </div>
   </nav>
 
-  <editor
-      :api-key="apiKey"
-      v-model="textContent"
-      :init="{
-         height: 500,
-         menubar: false,
-         plugins: [
-           'advlist autolink lists link image charmap print preview anchor',
-           'searchreplace visualblocks code fullscreen',
-           'insertdatetime media table paste code help wordcount'
-         ],
-         toolbar:
-           'undo redo | formatselect | bold italic backcolor | \
-           alignleft aligncenter alignright alignjustify | \
-           bullist numlist outdent indent | removeformat | help'
-       }"
-  />
 
-  <DocumentMenu @getThisDocument="getThisDocument" :documents="documents"></DocumentMenu>
-  <CreateDocumentForm @createDocument="createDocument"></CreateDocumentForm>
+  <div class="flex flex-row justify-between">
+    <editor
+        class="h-full"
+        :api-key="apiKey"
+        v-model="textContent"
+        :init="{
+           height: 500,
+           menubar: false,
+           plugins: [
+             'advlist autolink lists link image charmap print preview anchor',
+             'searchreplace visualblocks code fullscreen',
+             'insertdatetime media table paste code help wordcount'
+           ],
+           toolbar:
+             'undo redo | formatselect | bold italic backcolor | \
+             alignleft aligncenter alignright alignjustify | \
+             bullist numlist outdent indent | removeformat | help'
+         }"
+    />
+
+
+    <div class="w-1/ flex flex-col justify-between">
+      <CreateDocumentForm @createDocument="createDocument"></CreateDocumentForm>
+      <DocumentMenu @getThisDocument="getThisDocument" :documents="documents"></DocumentMenu>
+    </div>
+  </div>
 </template>
 
 
@@ -59,12 +65,18 @@ export default {
   methods: {
     consoleLogText() {
       console.log('*> --- Console Log Text from Tiny MCE Editor ----- *')
-      console.log('textContent: ')
       console.log(this.textContent)
     },
-    showCreateDocumentForm() {
-      console.log('KLICK -> showCreateDocumentForm()');
-    },
+    // showDocumentsMenu() {
+    //   console.log("CLICK -> Select document.");
+    //
+    //   DocumentMenu.isShowing = !DocumentMenu.isShowing;
+    //
+    //   console.log(DocumentMenu.isShowing);
+    // },
+    // showCreateDocumentForm() {
+    //   console.log('CLICK -> showCreateDocumentForm()');
+    // },
     getDocuments() {
       axios.get('https://editor-backend-express.azurewebsites.net/document')
           .then(response => {
@@ -97,7 +109,8 @@ export default {
       }).then(response => {
         console.log('Create Document RESPONSE: ', response.data);
 
-        this.getDocuments()
+        this.getDocuments();
+        this.getThisDocument(response.data._id);
       }).catch(error => {
         console.log(`Error Status: ${error.response.status} \n Error Message: ${error.response.message}`);
       })
@@ -121,7 +134,7 @@ export default {
   watch: {
     textContent(textValue) {
       this.currentDocument.text = textValue;
-      console.log('*> ', textValue)
+      // this.consoleLogText()
     },
     documents() {
       // this.documents = newValue

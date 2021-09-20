@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <h3 class="text-2xl font-bold">Documents</h3>
+  <div id="documentMenu" class="w-4/5 mx-auto">
     <table class="m-auto">
       <thead>
       <tr class="border-b-2 border-blue-500 mb-6">
@@ -34,6 +33,7 @@ export default {
   },
   data: () => ({
     columns: ["author", "title", "category"],
+    isShowing: true,
   }),
   props: {
     thisId: undefined,
