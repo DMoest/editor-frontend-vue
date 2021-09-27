@@ -2,7 +2,7 @@
   <nav class="w-full h-auto p-4 bg-gray-700">
     <div class="w-3/4 flex flex-row justify-around ">
       <button @click="saveDocument"
-              class="ml-1 mr-auto px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Save Change</button>
+              class="ml-1 mr-auto px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Save</button>
     </div>
   </nav>
 

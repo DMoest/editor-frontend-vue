@@ -1,0 +1,19 @@
+Test cases for frontend (use cases)
+
+These are ideas for test cases:
+1. Can the user navigate to the text editor?
+2. Can the user create a new document while at the text editor?
+3. Can the user open a document from the list of documents?
+4. Can a user save a updated document?
+5. Can the user delete a document from the list of documents?
+
+
+If this was a enterprise application.
+* The most important stuff:
+1. Can the user login?
+2. Can the user place/pay for an order?
+
+* The other stuff:
+Navigational functionality.
+CRUD stuff..
+
