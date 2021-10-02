@@ -1,5 +1,5 @@
 <template>
-  <nav class="w-full h-auto p-4 bg-gray-700">
+  <nav id="documentEditorNavigation" class="w-full h-auto p-4 bg-gray-700">
     <div class="w-3/4 flex flex-row justify-around ">
       <button @click="saveDocument"
               class="ml-1 mr-auto px-3 py-2 bg-blue-400 rounded text-white font-bold hover:bg-blue-200">Save</button>
@@ -9,6 +9,7 @@
 
   <div class="flex flex-row justify-between">
     <editor
+        id="theEditor"
         class="h-full"
         :api-key="apiKey"
         v-model="textContent"
@@ -28,9 +29,9 @@
     />
 
 
-    <div class="w-1/ flex flex-col justify-between">
-      <CreateDocumentForm @createDocument="createDocument"></CreateDocumentForm>
-      <DocumentMenu @getThisDocument="getThisDocument" :documents="documents"></DocumentMenu>
+    <div id="formAndMenuWrapper" class="w-1/ flex flex-col justify-between">
+      <CreateDocumentForm id="createDocumentForm" @createDocument="createDocument"></CreateDocumentForm>
+      <DocumentMenu id="documentMenu" @getThisDocument="getThisDocument" :documents="documents"></DocumentMenu>
     </div>
   </div>
 </template>

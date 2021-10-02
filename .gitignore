@@ -22,3 +22,7 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Unwanted Test output
+/tests/e2e/videos
+/tests/e2e/screenshots

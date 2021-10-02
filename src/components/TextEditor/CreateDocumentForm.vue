@@ -25,6 +25,7 @@
              class="w-4/5 p-2 rounded-sm bg-gray-200 focus:bg-blue-100">
 
     <button @click="createTheDocument"
+            id="createDocumentButton"
             class="w-4/5 my-4 py-2 px-4 rounded font-bold text-white bg-blue-400 hover:bg-blue-300"
             type="submit">
       Create New Document
