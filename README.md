@@ -1,3 +1,6 @@
+[![Build Status](https://app.travis-ci.com/DMoest/editor-frontend-vue.svg?branch=main)](https://app.travis-ci.com/DMoest/editor-frontend-vue)  
+
+
 # Text Editor Frontend - Vue.js
 
 This repository is a part of the course JSRamverk at Blekinge Institute of Technology (BTH).
@@ -32,5 +35,17 @@ npm run build
 npm run lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### Implementation & E2E Testing the Application
+First start the development server:
+```
+npm run serve
+```
+then run the tests:
+```
+npm run test
+```
+
+If you would like to use Cypress interactive testing mode where the browser stepps through things live:
+```
+npm run test:e2e
+```

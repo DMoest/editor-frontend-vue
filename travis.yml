@@ -1,0 +1,17 @@
+language: node_js
+
+node_js:
+  - "node"
+  - "14"
+
+sudo: false
+
+git:
+  submodules: false
+
+before_script:
+  - npm install
+
+script:
+  - npm run serve
+  - npm run test
