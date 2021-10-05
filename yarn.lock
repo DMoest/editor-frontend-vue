@@ -943,11 +943,6 @@
     "debug" "^3.1.0"
     "lodash.once" "^4.1.1"
 
-"@foreachbe/cypress-tinymce@^1.0.0":
-  "integrity" "sha512-/uiJBAPtSp1gYdSd6SAOZ91EGk23458eL93R5tQFwsgmARy3KSHFzQQuJwCH1RFwLWZ/M2wc9a9knRA7httlKA=="
-  "resolved" "https://registry.npmjs.org/@foreachbe/cypress-tinymce/-/cypress-tinymce-1.0.0.tgz"
-  "version" "1.0.0"
-
 "@hapi/address@2.x.x":
   "integrity" "sha512-QD1PhQk+s31P1ixsX0H0Suoupp3VMXzIVMSwobR3F3MSUO2YCV0B7xqLcUw/Bh8yuvd3LhpyqLQWTNcRmp6IdQ=="
   "resolved" "https://registry.npmjs.org/@hapi/address/-/address-2.1.4.tgz"
@@ -1335,6 +1330,13 @@
   "version" "3.4.35"
   dependencies:
     "@types/node" "*"
+
+"@types/cypress@^1.1.0":
+  "integrity" "sha512-OXe0Gw8LeCflkG1oPgFpyrYWJmEKqYncBsD/J0r17r0ETx/TnIGDNLwXt/pFYSYuYTpzcq1q3g62M9DrfsBL4g=="
+  "resolved" "https://registry.npmjs.org/@types/cypress/-/cypress-1.1.3.tgz"
+  "version" "1.1.3"
+  dependencies:
+    "cypress" "*"
 
 "@types/express-serve-static-core@*", "@types/express-serve-static-core@^4.17.18":
   "integrity" "sha512-3UJuW+Qxhzwjq3xhwXm2onQcFHn76frIYVbTu+kn24LFxI+dEhdfISDFovPB8VpEgW8oQCTpRuCe+0zJxB7NEA=="
@@ -4125,7 +4127,12 @@
   "resolved" "https://registry.npmjs.org/cyclist/-/cyclist-1.0.1.tgz"
   "version" "1.0.1"
 
-"cypress@^3.8.3":
+"cypress-iframe@^1.0.1":
+  "integrity" "sha512-Ne+xkZmWMhfq3x6wbfzK/SzsVTCrJru3R3cLXsoSAZyfUtJDamXyaIieHXeea3pQDXF4wE2w4iUuvCYHhoD31g=="
+  "resolved" "https://registry.npmjs.org/cypress-iframe/-/cypress-iframe-1.0.1.tgz"
+  "version" "1.0.1"
+
+"cypress@*", "cypress@^3.8.3":
   "integrity" "sha512-I9L/d+ilTPPA4vq3NC1OPKmw7jJIpMKNdyfR8t1EXYzYCjyqbc59migOm1YSse/VRbISLJ+QGb5k4Y3bz2lkYw=="
   "resolved" "https://registry.npmjs.org/cypress/-/cypress-3.8.3.tgz"
   "version" "3.8.3"

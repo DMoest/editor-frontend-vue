@@ -1,6 +1,8 @@
 <template>
-  <div id="documentMenu" class="w-4/5 mx-auto">
-    <table id="documentsTable" class="m-auto">
+  <div id="documentMenu"
+       class="w-4/5 mx-auto">
+    <table id="documentsTable"
+           class="m-auto">
       <thead id="documentsTableHeader">
       <tr class="border-b-2 border-blue-500 mb-6">
         <th class="px-4 py-2 text-left capitalize"
