@@ -2,18 +2,6 @@ Test cases for frontend (use cases)
 
 These are ideas for test cases:
 1. Can the user navigate to the text editor?                        Yes
-2. Can the user create a new document?                              No, test for it!
+2. Is the input of the form valid?                                  Yes
 3. Can the user open a document from the list of documents?         Yes
-4. Can a user save a updated document?                              No, test for it!
-5. Can the user delete a document from the list of documents?       No, test for it!
-
-
-If this was a enterprise application.
-* The most important stuff:
-1. Can the user login?                                              No, test for it!
-2. Can the user place/pay for an order?                             No, test for it!
-
-* The other stuff:
-Navigational functionality.
-CRUD stuff..
-
+4. Can the user create a new document?                              Yes
