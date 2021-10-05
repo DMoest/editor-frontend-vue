@@ -45,7 +45,7 @@ then run the tests:
 npm run test
 ```
 
-If you would like to use Cypress interactive testing mode where the browser stepps through things live:
+If you would like to use Cypress interactive testing mode where the chrome browser stepps through things live for you to see:
 ```
 npm run test:e2e
 ```
